@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fase 4</title>
+    <title>Eu tive que ouvir esse áudio 10x...</title>
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -16,18 +16,8 @@
             height: 100vh;
             margin: 0;
         }
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 10px;
-            max-width: 800px;
-            text-align: center;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 5px;
+        h1 {
+            color: #333;
         }
         .button-container {
             margin-top: 20px;
@@ -48,7 +38,7 @@
     <script>
         function solicitarSenha() {
             var senha = prompt("Digite a senha para continuar:");
-            if (senha && senha.trim().toLowerCase().replace(/\s+/g, " ") === "torrada crocante") {
+            if (senha && senha.trim().toLowerCase().replace(/\s+/g, " ") === "obrigado sheep") {
                 location.href = 'https://seu-link-externo.com';
             } else {
                 alert("Senha incorreta! Tente novamente.");
@@ -57,10 +47,11 @@
     </script>
 </head>
 <body>
-    <div class="content">
-        <img src="https://i.imgur.com/amc1qOr.png" alt="Imagem do Enigma">
-    </div>
-    
+    <h1>Eu tive que ouvir esse áudio 10x...</h1>
+    <audio controls>
+        <source src="obrigados-sheep.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
     <div class="button-container">
         <button class="button" onclick="solicitarSenha()">Continuar</button>
     </div>
