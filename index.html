@@ -3,69 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento Enigmas</title>
+    <title>Fase 4</title>
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
             text-align: center;
             background-color: #f4f4f9;
-            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
         }
-        h1 {
-            color: #333;
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            max-width: 800px;
+            text-align: center;
         }
-        h3 {
-            color: #555;
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 5px;
         }
         .button-container {
             margin-top: 20px;
         }
         .button {
-            padding: 15px 30px;
-            font-size: 18px;
+            padding: 12px 24px;
+            font-size: 16px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin: 10px;
-        }
-        .continue {
             background-color: #28a745;
             color: white;
         }
-        .continue:hover {
+        .button:hover {
             background-color: #218838;
-        }
-        .quit {
-            background-color: #dc3545;
-            color: white;
-        }
-        .quit:hover {
-            background-color: #c82333;
         }
     </style>
     <script>
-        document.addEventListener('contextmenu', function (e) {
-            e.preventDefault();
-        });
-        document.addEventListener('keydown', function (e) {
-            if (e.key === "F12" || 
-                (e.ctrlKey && e.shiftKey && e.key === "I") || 
-                (e.ctrlKey && e.shiftKey && e.key === "J") || 
-                (e.ctrlKey && e.key === "U")) {
-                e.preventDefault();
+        function solicitarSenha() {
+            var senha = prompt("Digite a senha para continuar:");
+            if (senha && senha.trim().toLowerCase().replace(/\s+/g, " ") === "torrada crocante") {
+                location.href = 'https://seu-link-externo.com';
+            } else {
+                alert("Senha incorreta! Tente novamente.");
             }
-        });
+        }
     </script>
 </head>
 <body>
-    <h1>Bem vindo!</h1>
-    <h3>Este evento está sendo produzido pelo <a href="https://twitch.tv/xRabanada" target="_blank">Twitch.tv/xRabanada</a></h3>
-    <h3>A premiação é de 40k de cash para o único ganhador!</h3>
-    <h3>Este evento irá ter alguns desafios, vocês podem se juntar no Discord para tentar resolver juntos e dividir o valor, ou façam como quiserem :P</h3>
+    <div class="content">
+        <img src="https://i.imgur.com/amc1qOr.png" alt="Imagem do Enigma">
+    </div>
     
     <div class="button-container">
-        <button class="button continue" onclick="location.href='https://seu-link-externo.com'">Continuar</button>
-        <button class="button quit" onclick="alert('Você desistiu! Até a próxima.')">Desistir</button>
+        <button class="button" onclick="solicitarSenha()">Continuar</button>
     </div>
 </body>
 </html>
